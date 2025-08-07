@@ -62,7 +62,7 @@ function App() {
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <img src="src/assets/Leonardo_Phoenix_10_Crie_um_logo_moderno_para_uma_agncia_chama_1.jpg" alt="Digitalfy logo" className="h-8"
+          <img src="src/assets/Leonardo_Phoenix_10_Crie_um_logo_moderno_para_uma_agncia_chama_1.jpg" alt="Digitalfy logo" className="h-8"/>
           
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#home" className="text-foreground hover:text-primary transition-colors">Home</a>
