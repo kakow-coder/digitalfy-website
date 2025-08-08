@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from './components/ui/button';
+import { logo } from "./assets/Leonardo_Phoenix_10_Crie_um_logo_moderno_para_uma_agncia_chama_1.jpg";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './components/ui/card';
 import { Badge } from './components/ui/badge';
 import { 
@@ -63,8 +64,7 @@ function App() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <img src="/src/assets/Leonardo_Phoenix_10_Crie_um_logo_moderno_para_uma_agncia_chama_1.jpg
-" alt="Digitalfy Logo" className="h-8" />
+            <img src={logo} alt="Digitalfy Logo" className="h-8" />
              
   </div>
 </div>
