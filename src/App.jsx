@@ -44,7 +44,7 @@ function App() {
     },
     {
       icon: Shield,
-      title: "Proteção de Marcas",
+      title: "Registro de Marcas",
       description: "Serviço completo para proteger sua marca contra usos indevidos e preservar seus direitos no INPI e no mercado.",
       features: ["Monitoramento Junto ao INPI", "Notificações Extrajudiciais", "Acompanhamento Especializado"]
     }
