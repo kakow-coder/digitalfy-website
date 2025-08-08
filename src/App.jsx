@@ -107,7 +107,7 @@ function App() {
             
             <div className="relative">
               <img 
-                src="src/assets/Leonardo_Phoenix_10_Crie_um_logo_moderno_para_uma_agncia_chama_1.jpg" 
+                src="https://hzksjbnudhswgqmccfnu.supabase.co/storage/v1/object/public/imagens-site-leco/logos/Untitled%20folder/banne.jpg" 
                 alt="Digitalfy Banner" 
                 className="w-full h-96 object-cover rounded-3xl floating-animation"
               />
