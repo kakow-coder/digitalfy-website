@@ -1,17 +1,16 @@
 import React from 'react';
 import { Button } from './components/ui/button';
-import logo from './assets/Leonardo_Phoenix_10_Crie_um_logo_moderno_para_uma_agncia_chama_1.jpg';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './components/ui/card';
 import { Badge } from './components/ui/badge';
-import { 
-  Globe, 
-  Target, 
-  Vote, 
-  Shield, 
-  ArrowRight, 
-  CheckCircle, 
-  Users, 
-  TrendingUp, 
+import {
+  Globe,
+  Target,
+  Vote,
+  Shield,
+  ArrowRight,
+  CheckCircle,
+  Users,
+  TrendingUp,
   Award,
   Mail,
   Phone,
@@ -64,11 +63,8 @@ function App() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-           <img src={logo} alt="Logo da agência" className="h-10 rounded-md" />
-
-             
-  </div>
-</div>
+            <img src="/src/assets/digitalfy_logo_banner.jpg" alt="Digitalfy Logo" className="h-10" />
+          </div>
           
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#home" className="text-foreground hover:text-primary transition-colors">Home</a>
@@ -110,14 +106,11 @@ function App() {
             </div>
             
             <div className="relative">
-              <div className="floating-animation">
-                <div className="w-full h-96 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl flex items-center justify-center">
-                  <div className="text-center">
-                    <img src={logo} alt="Banner da agência" className="rounded-3xl w-full h-full object-cover" />
-
-                  </div>
-                </div>
-              </div>
+              <img 
+                src="/src/assets/digitalfy_logo_banner.jpg" 
+                alt="Digitalfy Banner" 
+                className="w-full h-96 object-cover rounded-3xl floating-animation"
+              />
             </div>
           </div>
         </div>
@@ -240,10 +233,7 @@ function App() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-lg">D</span>
-                </div>
-                <span className="text-2xl font-bold text-gradient">Digitalfy</span>
+                <img src="/src/assets/digitalfy_logo_banner.jpg" alt="Digitalfy Logo" className="h-10" />
               </div>
               <p className="text-muted-foreground mb-6 max-w-md">
                 Transformando negócios através de estratégias digitais inovadoras e resultados mensuráveis.
