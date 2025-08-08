@@ -63,8 +63,12 @@ function App() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <img src="https://hzksjbnudhswgqmccfnu.supabase.co/storage/v1/object/public/imagens-site-leco/logos/Untitled%20folder/logodigital.jpeg" alt="Digitalfy Logo" className="h-10" />
-          </div>
+  <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+    <span className="text-primary-foreground font-bold text-lg">D</span>
+  </div>
+  <span className="text-2xl font-bold text-gradient">Digitalfy</span>
+</div>
+
           
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#home" className="text-foreground hover:text-primary transition-colors">Home</a>
