@@ -45,8 +45,8 @@ function App() {
     {
       icon: Shield,
       title: "Proteção de Marcas",
-      description: "Monitoramento e proteção da reputação digital da sua marca, gestão de crises e estratégias de brand safety.",
-      features: ["Monitoramento 24/7", "Gestão de Crises", "Proteção de Reputação"]
+      description: "Serviço completo para proteger sua marca contra usos indevidos e preservar seus direitos no INPI e no mercado.",
+      features: ["Monitoramento junto ao INPI", "Notificações extrajudiciais", "Acompanhamento jurídico especializado"]
     }
   ];
 
