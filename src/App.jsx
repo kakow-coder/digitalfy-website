@@ -303,7 +303,7 @@ function App() {
           <div className="relative carousel-container">
             <div ref={carouselRef} className="carousel-wrapper">
               {casesData.map((caseItem, index) => (
-                <Card key={index} className="carousel-item case-card h-22">
+                <Card key={index} className="carousel-item case-card h-74">
                   <CardHeader>
                     <CardTitle className="text-xl">{caseItem.title}</CardTitle>
                   </CardHeader>
