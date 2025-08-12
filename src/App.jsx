@@ -300,7 +300,7 @@ function App() {
             </p>
           </div>
 
-          <div className="relative carousel-container">
+        <div className="relative carousel-container">
   <div ref={carouselRef} className="carousel-wrapper grid">
     {casesData.map((caseItem, index) => (
       <Card key={index} className="carousel-item case-card h-full flex flex-col">
@@ -321,12 +321,6 @@ function App() {
             <p className="text-muted-foreground text-sm">{caseItem.result}</p>
           </div>
           <img 
-            src={caseItem.imageUrl} 
-            alt={`Ilustração do case: ${caseItem.title}`}
-            className="w-full h-auto object-cover mt-4 rounded-md"
-          />
-  
-           <img 
             src={caseItem.imageUrl} 
             alt={`Ilustração do case: ${caseItem.title}`}
             className="w-full h-auto object-cover mt-4 rounded-md"
