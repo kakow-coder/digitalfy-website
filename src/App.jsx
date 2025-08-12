@@ -300,25 +300,36 @@ function App() {
             </p>
           </div>
 
-          <div className="relative carousel-container">
-            <div ref={carouselRef} className="carousel-wrapper">
-              {casesData.map((caseItem, index) => (
-                <Card key={index} className="carousel-item case-card h-full">
-                  <CardHeader>
-                    <CardTitle className="text-xl">{caseItem.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div>
-                      <h3 className="font-semibold text-primary mb-1">Objetivo:</h3>
-                      <p className="text-muted-foreground text-sm">{caseItem.objective}</p>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-primary mb-1">Ação:</h3>
-                      <p className="text-muted-foreground text-sm">{caseItem.action}</p>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-primary mb-1">Resultado:</h3>
-                      <p className="text-muted-foreground text-sm">{caseItem.result}</p>
+           <div className="relative carousel-container">
+           <div ref={carouselRef} className="carousel-wrapper grid">
+          {casesData.map((caseItem, index) => (
+          <Card key={index} className="carousel-item case-card h-full flex flex-col">
+          <CardHeader>
+          <CardTitle className="text-xl">{caseItem.title}</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4 flex-grow">
+          <div>
+            <h3 className="font-semibold text-primary mb-1">Objetivo:</h3>
+            <p className="text-muted-foreground text-sm">{caseItem.objective}</p>
+           </div>
+           <div>
+             <h3 className="font-semibold text-primary mb-1">Ação:</h3>
+            <p className="text-muted-foreground text-sm">{caseItem.action}</p>
+           </div>
+          <div>
+             <h3 className="font-semibold text-primary mb-1">Resultado:</h3>
+            <p className="text-muted-foreground text-sm">{caseItem.result}</p>
+           </div>
+           <img 
+            src={caseItem.imageUrl} 
+            alt={`Ilustração do case: ${caseItem.title}`}
+            className="w-full h-auto object-cover mt-4 rounded-md"
+          />
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</div>
                       
                       {/* Dashboard de resultados */}
                       <div className="mt-4">
