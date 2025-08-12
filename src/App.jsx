@@ -112,9 +112,13 @@ function App() {
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <img src={digitalfyLogoHorizontal} alt="Digitalfy Logo" className="h-10" />
-          </div>
+           <div className="flex items-center space-x-2">
+             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-lg">D</span>
+                 </div>
+                     <span className="text-2xl font-bold text-gradient">Digitalfy</span>
+                   </div>
+
           
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#home" className="text-foreground hover:text-primary transition-colors">Home</a>
@@ -124,7 +128,7 @@ function App() {
           </nav>
           
           <Button className="pulse-button" asChild>
-            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os serviços da Digitalfy." target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5521987211586?text=Olá! Gostaria de saber mais sobre os serviços da Digitalfy." target="_blank" rel="noopener noreferrer">
               Fale Conosco
             </a>
           </Button>
@@ -159,7 +163,7 @@ function App() {
             
             <div className="relative">
               <img 
-                src={digitalfyLogoHorizontal} 
+                src="https://hzksjbnudhswgqmccfnu.supabase.co/storage/v1/object/public/imagens-site-leco/logos/Untitled%20folder/bannercases.png"
                 alt="Digitalfy Banner" 
                 className="w-full h-96 object-cover rounded-3xl floating-animation"
               />
@@ -273,7 +277,7 @@ function App() {
             Entre em contato conosco e descubra como podemos ajudar sua empresa a alcançar novos patamares no digital.
           </p>
           <Button size="lg" variant="secondary" className="pulse-button" asChild>
-            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de solicitar uma proposta da Digitalfy." target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5521987211586text=Olá! Gostaria de solicitar uma proposta da Digitalfy." target="_blank" rel="noopener noreferrer">
               Solicitar Proposta
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
@@ -356,7 +360,7 @@ function App() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <img src={digitalfyLogoHorizontal} alt="Digitalfy Logo" className="h-10" />
+                <img src="https://hzksjbnudhswgqmccfnu.supabase.co/storage/v1/object/public/imagens-site-leco/logos/Untitled%20folder/logohorizo3.png" alt="Digitalfy Logo" className="h-10" />
               </div>
               <p className="text-muted-foreground mb-6 max-w-md">
                 Transformamos sua presença digital com estratégias inovadoras e resultados comprovados. Sua parceira de confiança no mundo digital.
@@ -368,7 +372,7 @@ function App() {
                 <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                   <Twitter className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://www.instagram.com/digitalfy.br/?hl=pt" className="text-muted-foreground hover:text-primary transition-colors">
                   <Instagram className="h-5 w-5" />
                 </a>
                 <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
@@ -391,8 +395,8 @@ function App() {
               <ul className="space-y-3">
                 <li className="flex items-center text-muted-foreground">
                   <Phone className="h-4 w-4 mr-2" />
-                  <a href="https://wa.me/5511999999999?text=Olá! Gostaria de falar com a Digitalfy." target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                    WhatsApp: (11) 9999-9999
+                  <a href="https://wa.me/5521987211586text=Olá! Gostaria de falar com a Digitalfy." target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                    WhatsApp: +55 (21) 980 374 642 | +55 (21) 987 211 586
                   </a>
                 </li>
                 <li className="flex items-center text-muted-foreground">
