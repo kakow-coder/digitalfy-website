@@ -1,4 +1,5 @@
 import digitalfyLogoHorizontal from './assets/digitalfy_logo_horizontal.png';
+import dashboardImage from './assets/dashboard.png';
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from './components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './components/ui/card';
@@ -314,6 +315,15 @@ function App() {
                     <div>
                       <h3 className="font-semibold text-primary mb-1">Resultado:</h3>
                       <p className="text-muted-foreground text-sm">{caseItem.result}</p>
+                      
+                      {/* Dashboard de resultados */}
+                      <div className="mt-4">
+                        <img 
+                          src={dashboardImage} 
+                          alt="Dashboard de resultados" 
+                          className="w-full h-32 object-cover rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow"
+                        />
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
