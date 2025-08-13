@@ -304,34 +304,37 @@ function App() {
     <div className="relative carousel-container">
       
       {/* O wrapper dos cards, onde a rolagem acontece */}
-      <div ref={carouselRef} className="carousel-wrapper grid">
-        {casesData.map((caseItem, index) => (
-          <Card key={index} className="carousel-item case-card h-full flex flex-col">
-            <CardHeader>
-              <CardTitle className="text-xl">{caseItem.title}</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4 flex-grow">
-              <div>
-                <h3 className="font-semibold text-primary mb-1">Objetivo:</h3>
-                <p className="text-muted-foreground text-sm">{caseItem.objective}</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-primary mb-1">Ação:</h3>
-                <p className="text-muted-foreground text-sm">{caseItem.action}</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-primary mb-1">Resultado:</h3>
-                <p className="text-muted-foreground text-sm">{caseItem.result}</p>
-              </div>
-              <img 
-                src={caseItem.imageUrl} 
-                alt={`Ilustração do case: ${caseItem.title}`}
-                className="w-full h-auto object-cover mt-4 rounded-md"
-              />
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+      <div ref={carouselRef} 
+  className="carousel-wrapper flex items-stretch overflow-x-auto py-4 snap-x snap-mandatory">
+  {casesData.map((caseItem, index) => (
+    <div key={index} className="carousel-item-wrapper w-[90%] sm:w-1/2 md:w-1/3 lg:w-1/4 flex-shrink-0 snap-start px-2">
+      <Card className="case-card h-full flex flex-col">
+        <CardHeader>
+          <CardTitle className="text-xl">{caseItem.title}</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4 flex-grow">
+          <div>
+            <h3 className="font-semibold text-primary mb-1">Objetivo:</h3>
+            <p className="text-muted-foreground text-sm">{caseItem.objective}</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-primary mb-1">Ação:</h3>
+            <p className="text-muted-foreground text-sm">{caseItem.action}</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-primary mb-1">Resultado:</h3>
+            <p className="text-muted-foreground text-sm">{caseItem.result}</p>
+          </div>
+          <img 
+            src={caseItem.imageUrl} 
+            alt={`Ilustração do case: ${caseItem.title}`}
+            className="w-full h-auto object-cover mt-4 rounded-md"
+          />
+        </CardContent>
+      </Card>
+    </div>
+  ))}
+</div>
 
       {/* BOTÕES DE NAVEGAÇÃO (POSICIONADOS CORRETAMENTE) */}
       {/* Eles ficam DENTRO do 'carousel-container', mas FORA do 'carousel-wrapper' */}
