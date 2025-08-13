@@ -286,64 +286,52 @@ function App() {
       </section>
 
       {/* Cases Section (Carousel) */}
-      <section id="cases" className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge variant="secondary" className="mb-4">
-              Nossos Cases
-            </Badge>
-            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
-              Resultados que <span className="text-gradient">Impulsionam</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Confira alguns dos nossos projetos de sucesso e o impacto que geramos para nossos clientes.
-            </p>
-          </div>
+        <section id="cases" className="py-20">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <Badge variant="secondary" className="mb-4">
+        Nossos Cases
+      </Badge>
+      <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+        Resultados que <span className="text-gradient">Impulsionam</span>
+      </h2>
+      <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+        Confira alguns dos nossos projetos de sucesso e o impacto que geramos para nossos clientes.
+      </p>
+    </div>
 
-        <div className="relative carousel-container">
-  <div ref={carouselRef} className="carousel-wrapper grid">
-    {casesData.map((caseItem, index) => (
-      <Card key={index} className="carousel-item case-card h-full flex flex-col">
-        <CardHeader>
-          <CardTitle className="text-xl">{caseItem.title}</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4 flex-grow">
-          <div>
-            <h3 className="font-semibold text-primary mb-1">Objetivo:</h3>
-            <p className="text-muted-foreground text-sm">{caseItem.objective}</p>
-          </div>
-          <div>
-            <h3 className="font-semibold text-primary mb-1">Ação:</h3>
-            <p className="text-muted-foreground text-sm">{caseItem.action}</p>
-          </div>
-          <div>
-            <h3 className="font-semibold text-primary mb-1">Resultado:</h3>
-            <p className="text-muted-foreground text-sm">{caseItem.result}</p>
-          </div>
-          <img 
-            src={caseItem.imageUrl} 
-            alt={`Ilustração do case: ${caseItem.title}`}
-            className="w-full h-auto object-cover mt-4 rounded-md"
-          />
-        </CardContent>
-      </Card>
-    ))}
+    <div className="relative carousel-container">
+      <div ref={carouselRef} className="carousel-wrapper grid">
+        {casesData.map((caseItem, index) => (
+          <Card key={index} className="carousel-item case-card h-full flex flex-col">
+            <CardHeader>
+              <CardTitle className="text-xl">{caseItem.title}</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 flex-grow">
+              <div>
+                <h3 className="font-semibold text-primary mb-1">Objetivo:</h3>
+                <p className="text-muted-foreground text-sm">{caseItem.objective}</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-primary mb-1">Ação:</h3>
+                <p className="text-muted-foreground text-sm">{caseItem.action}</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-primary mb-1">Resultado:</h3>
+                <p className="text-muted-foreground text-sm">{caseItem.result}</p>
+              </div>
+              <img 
+                src={caseItem.imageUrl} 
+                alt={`Ilustração do case: ${caseItem.title}`}
+                className="w-full h-auto object-cover mt-4 rounded-md"
+              />
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
   </div>
-</div>
-                      
-                      {/* Dashboard de resultados */}
-                      <div className="mt-4">
-                        <img 
-                          src={dashboardImage} 
-                          alt="Dashboard de resultados" 
-                          className="w-full h-32 object-cover rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow"
-                        />
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+</section>
             {/* Navigation Arrows */}
             <Button
               variant="ghost"
