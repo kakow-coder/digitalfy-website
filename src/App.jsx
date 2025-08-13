@@ -62,26 +62,26 @@ function App() {
 
   const casesData = [
     {
-      title: "[Digitalfy] Leads para saúde | Meta Ads + Copy A/B",
+      title: "[Clínica Médica] Leads para saúde | Meta Ads + Copy A/B",
       objective: "Aumentar a captação de leads qualificados para uma clínica de especialidades.",
       action: "Planejamento e execução de campanhas Meta Ads com segmentação por interesse e públicos lookalike, testes A/B de criativos e copy para maximizar conversão.",
       result: "Aumento de 47% nos leads qualificados e redução de 32% no CPL em 60 dias."
     },
     {
-      title: "[ONG Mudes] SEO + Campanha de arrecadação | CRO + Google Ads",
+      title: "[ONG] SEO + Campanha de arrecadação | CRO + Google Ad Grants",
       objective: "Ampliar o alcance orgânico e aumentar as doações para projetos sociais.",
       action: "Otimização SEO do site, criação de landing pages de alta conversão e campanha Google Ads voltada para públicos propensos a doar.",
       result: "Crescimento de 64% no tráfego orgânico, aumento de 38% na taxa de conversão e incremento de R$ 13 mil em arrecadações."
     },
     {
-      title: "[Omnicenter] E-commerce pet | ROAS 9,3 com funil de remarketing",
+      title: "[E-commerce] Loja Pet | ROAS 9,3 com funil de remarketing Google Ads Shopping + Meta Ads + TikTok Ads",
       objective: "Escalar vendas mantendo alta eficiência no retorno sobre investimento.",
       action: "Estruturação de funil de remarketing multicanal, segmentações personalizadas e otimização contínua de criativos e ofertas.",
       result: "ROAS médio de 9,3 e crescimento de 57% no faturamento em 90 dias."
     },
     {
-      title: "[Marketing Político] Campanha eleitoral | Tráfego pago, engajamento e captação de leads segmentados",
-      objective: "Aumentar o reconhecimento e a base de apoiadores de um candidato durante o período eleitoral.",
+      title: "[Marketing Político] Campanha eleitoral | Tráfego pago, engajamento e alcance com Social Ads",
+      objective: "Aumentar o reconhecimento e a base de apoiadores do candidato a Deputado Federal.",
       action: "Criação de funis de engajamento com campanhas segmentadas por região, idade e interesses políticos, além de impulsionamento de conteúdo estratégico.",
       result: "Crescimento de 220% na base de apoiadores e engajamento consistente acima da média do setor."
     },
