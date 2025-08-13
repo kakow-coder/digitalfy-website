@@ -397,7 +397,7 @@ function App() {
                 <li className="flex items-center text-muted-foreground">
                   <Phone className="h-4 w-4 mr-2" />
                   <a href="https://wa.me/5521987211586text=Olá! Gostaria de falar com a Digitalfy." target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                    +55 (21) 980 374 642 | +55 (21) 987 211 586
+                    WhatsApp: +55 (21) 987 211 586
                   </a>
                 </li>
                 <li className="flex items-center text-muted-foreground">
