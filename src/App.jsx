@@ -300,7 +300,10 @@ function App() {
       </p>
     </div>
 
+    {/* O container principal do carrossel precisa ser 'relative' */}
     <div className="relative carousel-container">
+      
+      {/* O wrapper dos cards, onde a rolagem acontece */}
       <div ref={carouselRef} className="carousel-wrapper grid">
         {casesData.map((caseItem, index) => (
           <Card key={index} className="carousel-item case-card h-full flex flex-col">
@@ -329,29 +332,29 @@ function App() {
           </Card>
         ))}
       </div>
+
+      {/* BOTÕES DE NAVEGAÇÃO (POSICIONADOS CORRETAMENTE) */}
+      {/* Eles ficam DENTRO do 'carousel-container', mas FORA do 'carousel-wrapper' */}
+      <Button
+        variant="ghost"
+        size="icon"
+        className="absolute top-1/2 -translate-y-1/2 left-2 z-10" // Classes para posicionar
+        onClick={scrollLeft}
+      >
+        <ArrowLeft className="h-6 w-6" />
+      </Button>
+      <Button
+        variant="ghost"
+        size="icon"
+        className="absolute top-1/2 -translate-y-1/2 right-2 z-10" // Classes para posicionar
+        onClick={scrollRight}
+      >
+        <ArrowRight className="h-6 w-6" />
+      </Button>
+
     </div>
   </div>
 </section>
-            {/* Navigation Arrows */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="carousel-arrow left"
-              onClick={scrollLeft}
-            >
-              <ArrowLeft className="h-6 w-6" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="carousel-arrow right"
-              onClick={scrollRight}
-            >
-              <ArrowRight className="h-6 w-6" />
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer id="contact" className="py-16 bg-muted/30">
