@@ -361,7 +361,7 @@ function App() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <img src="https://hzksjbnudhswgqmccfnu.supabase.co/storage/v1/object/public/imagens-site-leco/logos/Untitled%20folder/logohorizo3.png" alt="Digitalfy Logo" className="h-10" />
+                <img src="https://hzksjbnudhswgqmccfnu.supabase.co/storage/v1/object/public/imagens-site-leco/logos/Untitled%20folder/logohorizo3.png" alt="Digitalfy Logo" className="h-14" />
               </div>
               <p className="text-muted-foreground mb-6 max-w-md">
                 Transformamos sua presença digital com estratégias inovadoras e resultados comprovados. Sua parceira de confiança no mundo digital.
