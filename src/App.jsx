@@ -57,7 +57,7 @@ function App() {
     { number: "200+", label: "Projetos Entregues" },
     { number: "150+", label: "Clientes Satisfeitos" },
     { number: "98%", label: "Taxa de Satisfação" },
-    { number: "5", label: "Anos de Experiência" }
+    { number: "6", label: "Anos de Experiência" }
   ];
 
   const casesData = [
@@ -156,7 +156,7 @@ function App() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <a href="#cases">Nossos Casos</a>
+                  <a href="#cases">Nossos Cases</a>
                 </Button>
               </div>
             </div>
@@ -164,7 +164,7 @@ function App() {
             <div className="relative">
               <img 
                 src="https://hzksjbnudhswgqmccfnu.supabase.co/storage/v1/object/public/imagens-site-leco/logos/Untitled%20folder/bannercases.png"
-                alt="Digitalfy Banner" 
+                alt="clientes-Banner" 
                 className="w-full h-96 object-cover rounded-3xl floating-animation"
               />
             </div>
@@ -325,11 +325,7 @@ function App() {
             <h3 className="font-semibold text-primary mb-1">Resultado:</h3>
             <p className="text-muted-foreground text-sm">{caseItem.result}</p>
           </div>
-          <img 
-            src={caseItem.imageUrl} 
-            alt={`Ilustração do case: ${caseItem.title}`}
-            className="w-full h-auto object-cover mt-4 rounded-md"
-          />
+    
         </CardContent>
       </Card>
     </div>
@@ -401,12 +397,12 @@ function App() {
                 <li className="flex items-center text-muted-foreground">
                   <Phone className="h-4 w-4 mr-2" />
                   <a href="https://wa.me/5521987211586text=Olá! Gostaria de falar com a Digitalfy." target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                    WhatsApp: +55 (21) 980 374 642 | +55 (21) 987 211 586
+                    +55 (21) 980 374 642 | +55 (21) 987 211 586
                   </a>
                 </li>
                 <li className="flex items-center text-muted-foreground">
                   <MapPin className="h-4 w-4 mr-2" />
-                  São Paulo, SP
+                  São Gonçalo, RJ
                 </li>
               </ul>
             </div>
@@ -414,7 +410,7 @@ function App() {
           
           <div className="border-t border-border mt-12 pt-8 text-center">
             <p className="text-muted-foreground">
-              © 2024 Digitalfy. Todos os direitos reservados.
+              © 2019 Digitalfy. Todos os direitos reservados.
             </p>
           </div>
         </div>
