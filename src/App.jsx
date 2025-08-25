@@ -54,9 +54,9 @@ function App() {
   ];
 
   const stats = [
-    { number: "200+", label: "Projetos Entregues" },
-    { number: "150+", label: "Clientes Satisfeitos" },
-    { number: "98%", label: "Taxa de Satisfação" },
+    { number: "260+", label: "Projetos Entregues" },
+    { number: "170+", label: "Clientes Satisfeitos" },
+    { number: "99%", label: "Taxa de Satisfação" },
     { number: "6", label: "Anos de Experiência" }
   ];
 
