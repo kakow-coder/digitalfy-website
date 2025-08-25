@@ -151,7 +151,7 @@ function App() {
                 Soluções estratégicas de marketing digital para empresas que querem crescer e se destacar no mercado digital competitivo.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="pulse-button">
+                <Button size="lg" variant="secondary" className="pulse-button" asChild>
                   <a href="https://wa.me/5521987211586?" target="_blank" rel="noopener noreferrer">
                   Comece Agora
                   <ArrowRight className="ml-2 h-5 w-5" />
