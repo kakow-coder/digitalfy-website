@@ -152,7 +152,7 @@ function App() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="pulse-button">
-                  <a href="https://wa.me/5521987211586?text=Olá! Gostaria de saber mais sobre os serviços da Digitalfy." target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/5521987211586?" target="_blank" rel="noopener noreferrer">
                   Comece Agora
                   <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
