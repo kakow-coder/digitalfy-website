@@ -62,31 +62,31 @@ function App() {
 
   const casesData = [
     {
-      title: "[Clínica Médica] Leads para saúde | Meta Ads + Copy A/B",
-      objective: "Aumentar a captação de leads qualificados para uma clínica de especialidades.",
-      action: "Planejamento e execução de campanhas Meta Ads com segmentação por interesse e públicos lookalike, testes A/B de criativos e copy para maximizar conversão.",
+      title: "Leads para Clínica Médica | Meta Ads + Google Ads Search",
+      objective: "Aumentar a captação de leads qualificados para uma clínica de especialidades médicas.",
+      action: "Planejamento estrtégico e execução de campanhas Meta Ads com segmentação por interesse e públicos lookalike, testes A/B de criativos e copy para maximizar conversão.",
       result: "Aumento de 47% nos leads qualificados e redução de 32% no CPL em 60 dias."
     },
     {
-      title: "[ONG] SEO + Campanha de arrecadação | CRO + Google Ad Grants",
-      objective: "Ampliar o alcance orgânico e aumentar as doações para projetos sociais.",
+      title: "Marketing Social para ONG/OSC | SEO + Campanha de captação com Google Ad Grants + CRO",
+      objective: "Ampliar o alcance orgânico e o posicionamento da marca e aumentar as arrecadações para projetos sociais.",
       action: "Otimização SEO do site, criação de landing pages de alta conversão e campanha Google Ads voltada para públicos propensos a doar.",
-      result: "Crescimento de 64% no tráfego orgânico, aumento de 38% na taxa de conversão e incremento de R$ 13 mil em arrecadações."
+      result: "Crescimento de 64% no tráfego orgânico, aumento de 38% na taxa de conversão e incremento de R$ 13 mil em arrecadações em 6 meses."
     },
     {
-      title: "[E-commerce] Loja Pet | ROAS 9,3 com funil de remarketing Google Ads Shopping + Meta Ads + TikTok Ads",
-      objective: "Escalar vendas mantendo alta eficiência no retorno sobre investimento.",
-      action: "Estruturação de funil de remarketing multicanal, segmentações personalizadas e otimização contínua de criativos e ofertas.",
+      title: "E-commerce Loja Pet | ROAS com Google Ads Shopping + Meta Ads",
+      objective: "Escalar vendas mantendo alta eficiência no retorno sobre investimento em Ads.",
+      action: "Estruturação de funil de remarketing multicanal, segmentações personalizadas e otimização e testes contínuos de criativos e ofertas.",
       result: "ROAS médio de 9,3 e crescimento de 57% no faturamento em 90 dias."
     },
     {
-      title: "[Marketing Político] Campanha eleitoral | Tráfego pago, engajamento e alcance com Social Ads",
+      title: "Marketing político para campanha eleitoral de vereador | Meta Ads + Google Ads + TikTok Ads + Twitter Ads + Linkedin Ads",
       objective: "Aumentar o reconhecimento e a base de apoiadores do candidato a Deputado Federal.",
-      action: "Criação de funis de engajamento com campanhas segmentadas por região, idade e interesses políticos, além de impulsionamento de conteúdo estratégico.",
-      result: "Crescimento de 220% na base de apoiadores e engajamento consistente acima da média do setor."
+      action: "Criação de funis multicanais de engajamento com campanhas segmentadas por demografia, além de impulsionamento de conteúdo estratégico.",
+      result: "Crescimento de 2.200% da base de apoiadores e engajamento consistente acima da média de 48%, comparado com o concorrente."
     },
     {
-      title: "[Proteção de Marcas] Oposição no INPI | Defesa contra registro conflitante",
+      title: "Proteção de Marca para Comércio | Defesa contra registro conflitante + Oposição no INPI ",
       objective: "Garantir a exclusividade de uso da marca 'BELA PIZZARIA', registrada desde 2021, frente a tentativa de registro da marca similar 'BELLA PIZZA' na mesma classe de serviços.",
       action: "Análise de colidência visual e fonética, identificação de risco de associação indevida e fundamentação jurídica baseada em anterioridade de registro e princípio da especialidade. Elaboração e protocolo de oposição junto ao INPI, requerendo o indeferimento do pedido conflitante.",
       result: "Defesa protocolada com fundamentação robusta, reforçando o direito de precedência e a proteção da marca do cliente contra concorrência desleal e desvio de clientela."
@@ -364,7 +364,7 @@ function App() {
                 <img src="https://hzksjbnudhswgqmccfnu.supabase.co/storage/v1/object/public/imagens-site-leco/logos/Untitled%20folder/logohorizo3.png" alt="Digitalfy Logo" className="h-14" />
               </div>
               <p className="text-muted-foreground mb-6 max-w-md">
-                Transformamos sua presença digital com estratégias inovadoras e resultados comprovados. Sua parceira de confiança no mundo digital.
+                Transformamos sua presença digital com estratégias inovadoras e resultados comprovados. Consolide sua presença no mundo digital.
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
