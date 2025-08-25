@@ -152,7 +152,7 @@ function App() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="pulse-button">
-                  Começar Agora
+                  Comece Agora
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button variant="outline" size="lg" asChild>
@@ -278,7 +278,7 @@ function App() {
           </p>
           <Button size="lg" variant="secondary" className="pulse-button" asChild>
             <a href="https://wa.me/5521987211586text=Olá! Gostaria de solicitar uma proposta da Digitalfy." target="_blank" rel="noopener noreferrer">
-              Falar com Especialista
+              Fale com Especialista
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
