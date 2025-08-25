@@ -273,7 +273,7 @@ function App() {
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6">
-            Pronto para transformar seu negócio?
+            Pronto Para Transformar Seu Negócio?
           </h2>
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Entre em contato conosco e descubra como podemos ajudar sua empresa a alcançar novos patamares no digital.
