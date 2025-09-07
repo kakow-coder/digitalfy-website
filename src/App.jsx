@@ -24,74 +24,68 @@ import { initAnimationsWithAccessibility } from './animations';
 import './App.css';
 
 function App() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const carouselRef = useRef(null);
-
   const casesData = [
     {
-      title: "[Digitalfy] Leads para saúde | Meta Ads + Copy A/B",
-      objective: "Aumentar a captação de leads qualificados para uma clínica de especialidades.",
-      action: "Planejamento e execução de campanhas Meta Ads com segmentação por interesse e públicos lookalike, testes A/B de criativos e copy para maximizar conversão.",
-      result: "Aumento de 47% nos leads qualificados e redução de 32% no CPL em 60 dias.",
+      category: "Geração de Leads",
+      title: "Leads para saúde | Meta Ads + Copy A/B",
+      description: "Aumentamos a captação de leads qualificados para uma clínica de especialidades com campanhas Meta Ads e testes A/B.",
+      metrics: [
+        { value: "47%", label: "Aumento de Leads Qualificados" },
+        { value: "32%", label: "Redução no CPL" }
+      ],
       dashboardImage: dashboardImage
     },
     {
-      title: "[ONG Mudes] SEO + Campanha de arrecadação | CRO + Google Ads",
-      objective: "Ampliar o alcance orgânico e aumentar as doações para projetos sociais.",
-      action: "Otimização SEO do site, criação de landing pages de alta conversão e campanha Google Ads voltada para públicos propensos a doar.",
-      result: "Crescimento de 64% no tráfego orgânico, aumento de 38% na taxa de conversão e incremento de R$ 13 mil em arrecadações.",
+      category: "SEO & Conteúdo",
+      title: "SEO + Campanha de arrecadação | CRO + Google Ads",
+      description: "Ampliamos o alcance orgânico e aumentamos as doações para projetos sociais com otimização SEO e campanhas de arrecadação.",
+      metrics: [
+        { value: "64%", label: "Crescimento Tráfego Orgânico" },
+        { value: "38%", label: "Aumento Taxa de Conversão" },
+        { value: "R$ 13 mil", label: "Incremento em Arrecadações" }
+      ],
       dashboardImage: dashboardImage
     },
     {
-      title: "[Omnicenter] E-commerce pet | ROAS 9,3 com funil de remarketing",
-      objective: "Escalar vendas mantendo alta eficiência no retorno sobre investimento.",
-      action: "Estruturação de funil de remarketing multicanal, segmentações personalizadas e otimização contínua de criativos e ofertas.",
-      result: "ROAS médio de 9,3 e crescimento de 57% no faturamento em 90 dias.",
+      category: "E-commerce",
+      title: "E-commerce pet | ROAS 9,3 com funil de remarketing",
+      description: "Escalamos vendas mantendo alta eficiência no retorno sobre investimento com funil de remarketing multicanal.",
+      metrics: [
+        { value: "9,3", label: "ROAS Médio" },
+        { value: "57%", label: "Crescimento Faturamento" }
+      ],
       dashboardImage: dashboardImage
     },
     {
-      title: "[Marketing Político] Campanha eleitoral | Tráfego pago, engajamento e captação de leads segmentados",
-      objective: "Aumentar o reconhecimento e a base de apoiadores de um candidato durante o período eleitoral.",
-      action: "Criação de funis de engajamento com campanhas segmentadas por região, idade e interesses políticos, além de impulsionamento de conteúdo estratégico.",
-      result: "Crescimento de 220% na base de apoiadores e engajamento consistente acima da média do setor.",
+      category: "Marketing Político",
+      title: "Campanha eleitoral | Tráfego pago, engajamento e captação de leads",
+      description: "Aumentamos o reconhecimento e a base de apoiadores de um candidato com campanhas segmentadas e impulsionamento de conteúdo.",
+      metrics: [
+        { value: "220%", label: "Crescimento Base Apoiadores" },
+        { value: "Acima da Média", label: "Engajamento Consistente" }
+      ],
       dashboardImage: dashboardImage
     },
     {
-      title: "[Proteção de Marcas] Oposição no INPI | Defesa contra registro conflitante",
-      objective: "Garantir a exclusividade de uso da marca 'BELA PIZZARIA', registrada desde 2021, frente a tentativa de registro da marca similar 'BELLA PIZZA' na mesma classe de serviços.",
-      action: "Análise de colidência visual e fonética, identificação de risco de associação indevida e fundamentação jurídica baseada em anterioridade de registro e princípio da especialidade. Elaboração e protocolo de oposição junto ao INPI, requerendo o indeferimento do pedido conflitante.",
-      result: "Defesa protocolada com fundamentação robusta, reforçando o direito de precedência e a proteção da marca do cliente contra concorrência desleal e desvio de clientela.",
+      category: "Proteção de Marcas",
+      title: "Oposição no INPI | Defesa contra registro conflitante",
+      description: "Garantimos a exclusividade de uso da marca 'BELA PIZZARIA' contra tentativa de registro similar.",
+      metrics: [
+        { value: "100%", label: "Marca Protegida" },
+        { value: "Sucesso", label: "Oposição Protocolada" }
+      ],
       dashboardImage: dashboardImage
     }
   ];
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % casesData.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + casesData.length) % casesData.length);
-  };
-
-  useEffect(() => {
-    if (carouselRef.current) {
-      const slideWidth = carouselRef.current.children[0]?.offsetWidth || 0;
-      carouselRef.current.scrollTo({
-        left: currentSlide * (slideWidth + 24),
-        behavior: 'smooth'
-      });
-    }
-  }, [currentSlide]);
-
-  // Initialize animations on component mount
   useEffect(() => {
     initAnimationsWithAccessibility();
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background-light text-text-medium">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background-white/90 backdrop-blur-md border-b border-border-light">
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -99,27 +93,27 @@ function App() {
               <img src={digitalfyLogoHorizontal} alt="Digitalfy" className="h-8" />
             </div>
 
-            {/* Menu colorido inspirado no modifia.net */}
+            {/* Menu sóbrio inspirado no modifia.net */}
             <div className="hidden md:flex items-center space-x-1">
-              <a href="#home" className="px-4 py-2 rounded-lg bg-green-500 text-white font-medium hover:bg-green-600 transition-colors">
+              <a href="#home" className="menu-item text-text-dark hover:text-primary-blue transition-colors">
                 Home
               </a>
-              <a href="#services" className="px-4 py-2 rounded-lg bg-blue-500 text-white font-medium hover:bg-blue-600 transition-colors">
+              <a href="#services" className="menu-item text-text-dark hover:text-primary-blue transition-colors">
                 Serviços
               </a>
-              <a href="#about" className="px-4 py-2 rounded-lg bg-purple-500 text-white font-medium hover:bg-purple-600 transition-colors">
+              <a href="#about" className="menu-item text-text-dark hover:text-primary-blue transition-colors">
                 Sobre
               </a>
-              <a href="#cases" className="px-4 py-2 rounded-lg bg-orange-500 text-white font-medium hover:bg-orange-600 transition-colors">
+              <a href="#cases" className="menu-item text-text-dark hover:text-primary-blue transition-colors">
                 Cases
               </a>
-              <a href="#contact" className="px-4 py-2 rounded-lg bg-pink-500 text-white font-medium hover:bg-pink-600 transition-colors">
+              <a href="#contact" className="menu-item text-text-dark hover:text-primary-blue transition-colors">
                 Contato
               </a>
             </div>
 
             {/* CTA Button */}
-            <Button className="hidden md:block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+            <Button className="hidden md:block btn-enhanced bg-primary-blue text-white hover:bg-primary-green">
               Fale Conosco
             </Button>
           </div>
@@ -139,8 +133,8 @@ function App() {
           <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.3"/>
-                <stop offset="100%" stopColor="#8B5CF6" stopOpacity="0.1"/>
+                <stop offset="0%" stopColor="var(--primary-blue)" stopOpacity="0.3"/>
+                <stop offset="100%" stopColor="var(--primary-green)" stopOpacity="0.1"/>
               </linearGradient>
             </defs>
             <path d="M 100 200 Q 400 100 800 300" stroke="url(#lineGradient)" strokeWidth="2" fill="none" className="draw-svg-path"/>
@@ -149,7 +143,7 @@ function App() {
         </div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-6xl lg:text-8xl font-bold text-gray-900 mb-8 leading-tight page-transition">
+          <h1 className="text-6xl lg:text-8xl font-bold text-text-dark mb-8 leading-tight page-transition">
             Transforme sua
             <br />
             <span className="text-gradient-flow">
@@ -157,16 +151,16 @@ function App() {
             </span>
           </h1>
           
-          <p className="text-xl lg:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl lg:text-2xl text-text-medium mb-12 max-w-4xl mx-auto leading-relaxed">
             Somos especialistas em marketing digital que impulsionam o crescimento do seu negócio através de estratégias inovadoras e resultados mensuráveis.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button size="lg" className="btn-enhanced bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-4 glow-blue">
+            <Button size="lg" className="btn-enhanced bg-primary-blue text-white text-lg px-8 py-4">
               Solicitar Proposta
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" size="lg" className="btn-enhanced text-lg px-8 py-4 border-2 glow-purple">
+            <Button variant="outline" size="lg" className="btn-enhanced text-lg px-8 py-4 border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white">
               Ver Cases de Sucesso
             </Button>
           </div>
@@ -174,41 +168,41 @@ function App() {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
+          <div className="w-6 h-10 border-2 border-text-light rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-text-light rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="min-h-screen py-20 bg-gray-50">
+      <section id="services" className="min-h-screen py-20 bg-background-light section-reveal">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-4 text-lg px-6 py-2">
               Nossos Serviços
             </Badge>
-            <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Soluções que <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">impulsionam</span>
+            <h2 className="text-4xl lg:text-6xl font-bold text-text-dark mb-6">
+              Soluções que <span className="text-gradient-flow">impulsionam</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-text-medium max-w-3xl mx-auto">
               Oferecemos um conjunto completo de serviços de marketing digital para acelerar o crescimento do seu negócio.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Presença Online */}
-            <Card className="card-3d group hover:shadow-2xl transition-all duration-300 border-0 bg-white gpu-accelerated">
+            <Card className="card-3d group hover:shadow-2xl transition-all duration-300 border-0 bg-background-white gpu-accelerated">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 glow-blue">
+                <div className="w-16 h-16 icon-gradient bg-primary-blue rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Globe className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-gray-900">Presença Online</CardTitle>
+                <CardTitle className="text-xl font-bold text-text-dark">Presença Online</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <CardDescription className="text-gray-600 mb-4">
+                <CardDescription className="text-text-medium mb-4">
                   Criação de websites, otimização SEO e gestão de redes sociais para fortalecer sua marca digital.
                 </CardDescription>
-                <ul className="text-sm text-gray-500 space-y-2">
+                <ul className="text-sm text-text-light space-y-2">
                   <li>• Desenvolvimento de websites</li>
                   <li>• Otimização SEO</li>
                   <li>• Gestão de redes sociais</li>
@@ -218,18 +212,18 @@ function App() {
             </Card>
 
             {/* Geração de Leads */}
-            <Card className="card-3d group hover:shadow-2xl transition-all duration-300 border-0 bg-white gpu-accelerated">
+            <Card className="card-3d group hover:shadow-2xl transition-all duration-300 border-0 bg-background-white gpu-accelerated">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 glow-blue">
+                <div className="w-16 h-16 icon-gradient bg-primary-green rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Target className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-gray-900">Geração de Leads</CardTitle>
+                <CardTitle className="text-xl font-bold text-text-dark">Geração de Leads</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <CardDescription className="text-gray-600 mb-4">
+                <CardDescription className="text-text-medium mb-4">
                   Campanhas de tráfego pago, automação de marketing e estratégias de conversão para gerar leads qualificados.
                 </CardDescription>
-                <ul className="text-sm text-gray-500 space-y-2">
+                <ul className="text-sm text-text-light space-y-2">
                   <li>• Google Ads & Meta Ads</li>
                   <li>• Automação de marketing</li>
                   <li>• Landing pages otimizadas</li>
@@ -239,18 +233,18 @@ function App() {
             </Card>
 
             {/* Marketing Político */}
-            <Card className="card-3d group hover:shadow-2xl transition-all duration-300 border-0 bg-white gpu-accelerated">
+            <Card className="card-3d group hover:shadow-2xl transition-all duration-300 border-0 bg-background-white gpu-accelerated">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 glow-purple">
+                <div className="w-16 h-16 icon-gradient bg-primary-blue rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Users className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-gray-900">Marketing Político</CardTitle>
+                <CardTitle className="text-xl font-bold text-text-dark">Marketing Político</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <CardDescription className="text-gray-600 mb-4">
+                <CardDescription className="text-text-medium mb-4">
                   Estratégias digitais para campanhas eleitorais, engajamento de eleitores e construção de base de apoiadores.
                 </CardDescription>
-                <ul className="text-sm text-gray-500 space-y-2">
+                <ul className="text-sm text-text-light space-y-2">
                   <li>• Campanhas eleitorais digitais</li>
                   <li>• Segmentação de públicos</li>
                   <li>• Gestão de crises</li>
@@ -260,18 +254,18 @@ function App() {
             </Card>
 
             {/* Proteção de Marcas */}
-            <Card className="card-3d group hover:shadow-2xl transition-all duration-300 border-0 bg-white gpu-accelerated">
+            <Card className="card-3d group hover:shadow-2xl transition-all duration-300 border-0 bg-background-white gpu-accelerated">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 glow-blue">
+                <div className="w-16 h-16 icon-gradient bg-primary-green rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Shield className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-gray-900">Proteção de Marcas</CardTitle>
+                <CardTitle className="text-xl font-bold text-text-dark">Proteção de Marcas</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <CardDescription className="text-gray-600 mb-4">
+                <CardDescription className="text-text-medium mb-4">
                   Monitoramento, registro e defesa de marcas no INPI, proteção contra uso indevido e gestão de propriedade intelectual.
                 </CardDescription>
-                <ul className="text-sm text-gray-500 space-y-2">
+                <ul className="text-sm text-text-light space-y-2">
                   <li>• Registro de marcas INPI</li>
                   <li>• Monitoramento de infrações</li>
                   <li>• Oposições e nulidades</li>
@@ -284,40 +278,40 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="min-h-screen py-20 bg-white">
+      <section id="about" className="min-h-screen py-20 bg-background-white section-reveal">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <Badge variant="secondary" className="mb-4 text-lg px-6 py-2">
                 Sobre a Digitalfy
               </Badge>
-              <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Sua parceira em <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">transformação digital</span>
+              <h2 className="text-4xl lg:text-6xl font-bold text-text-dark mb-6">
+                Sua parceira em <span className="text-gradient-flow">transformação digital</span>
               </h2>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-xl text-text-medium mb-8 leading-relaxed">
                 Somos uma agência especializada em marketing digital com foco em resultados mensuráveis. Nossa missão é impulsionar o crescimento dos nossos clientes através de estratégias inovadoras e tecnologia de ponta.
               </p>
               
               <div className="grid grid-cols-2 gap-8 mb-8">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">150+</div>
-                  <div className="text-gray-600">Projetos Entregues</div>
+                  <div className="text-4xl font-bold text-primary-blue mb-2">150+</div>
+                  <div className="text-text-medium">Projetos Entregues</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-green-600 mb-2">98%</div>
-                  <div className="text-gray-600">Satisfação dos Clientes</div>
+                  <div className="text-4xl font-bold text-primary-green mb-2">98%</div>
+                  <div className="text-text-medium">Satisfação dos Clientes</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-purple-600 mb-2">5+</div>
-                  <div className="text-gray-600">Anos de Experiência</div>
+                  <div className="text-4xl font-bold text-primary-blue mb-2">5+</div>
+                  <div className="text-text-medium">Anos de Experiência</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
-                  <div className="text-gray-600">Suporte Dedicado</div>
+                  <div className="text-4xl font-bold text-primary-green mb-2">24/7</div>
+                  <div className="text-text-medium">Suporte Dedicado</div>
                 </div>
               </div>
 
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+              <Button size="lg" className="btn-enhanced bg-primary-blue text-white text-lg px-8 py-4">
                 Conheça Nossa História
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -325,203 +319,129 @@ function App() {
 
             <div className="relative">
               {/* Elementos 3D decorativos */}
-              <div className="absolute -top-8 -left-8 w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl transform rotate-12 opacity-20"></div>
-              <div className="absolute -bottom-8 -right-8 w-24 h-24 bg-gradient-to-br from-green-500 to-blue-500 rounded-2xl transform -rotate-12 opacity-20"></div>
-              
-              <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-3xl shadow-2xl">
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-4">
-                    <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span className="text-gray-700">Estratégias personalizadas para cada cliente</span>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span className="text-gray-700">Resultados mensuráveis e transparentes</span>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span className="text-gray-700">Equipe especializada e certificada</span>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span className="text-gray-700">Tecnologia de ponta e inovação</span>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span className="text-gray-700">Suporte contínuo e consultoria estratégica</span>
-                  </div>
-                </div>
-              </div>
+              <div className="absolute -top-8 -left-8 w-32 h-32 bg-gradient-to-br from-primary-blue to-primary-green rounded-3xl transform rotate-12 opacity-20"></div>
+
+              <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-gradient-to-br from-primary-green to-primary-blue rounded-full opacity-20"></div>
+
+              <img 
+                src="https://via.placeholder.com/600x400" 
+                alt="Equipe Digitalfy" 
+                className="rounded-lg shadow-xl relative z-10"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Cases Section */}
-      <section id="cases" className="min-h-screen py-20 bg-gray-50">
+      {/* Cases Section - Novo estilo */}
+      <section id="cases" className="min-h-screen py-20 bg-background-light section-reveal">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge variant="secondary" className="mb-4 text-lg px-6 py-2">
-              Cases de Sucesso
-            </Badge>
-            <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Resultados que <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">impressionam</span>
+            <Badge variant="secondary" className="mb-4 text-lg px-6 py-2">Nossos Cases</Badge>
+            <h2 className="text-4xl lg:text-6xl font-bold text-text-dark mb-6 heading-enhanced">
+              Resultados que <span className="text-gradient-flow">falam por si</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Confira alguns dos nossos projetos de sucesso e o impacto que geramos para nossos clientes.
+            <p className="text-xl text-text-medium max-w-3xl mx-auto">
+              Veja como ajudamos nossos clientes a alcançar seus objetivos com estratégias de marketing digital.
             </p>
           </div>
 
-          <div className="relative">
-            <div ref={carouselRef} className="flex overflow-x-auto scrollbar-hide space-x-6 pb-4">
-              {casesData.map((caseItem, index) => (
-                <Card key={index} className="flex-shrink-0 w-80 lg:w-96 h-auto bg-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                  <CardHeader>
-                    <CardTitle className="text-lg font-bold text-gray-900 leading-tight">{caseItem.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div>
-                      <h3 className="font-semibold text-blue-600 mb-2">Objetivo:</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">{caseItem.objective}</p>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-green-600 mb-2">Ação:</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">{caseItem.action}</p>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-purple-600 mb-2">Resultado:</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">{caseItem.result}</p>
-                      
-                      {/* Dashboard de resultados */}
-                      <div className="mt-4">
-                        <img 
-                          src={caseItem.dashboardImage} 
-                          alt="Dashboard de resultados" 
-                          className="w-full h-32 object-cover rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
-                        />
+          <div className="cases-grid">
+            {casesData.map((caseItem, index) => (
+              <Card key={index} className="case-card section-reveal">
+                <CardContent className="p-0">
+                  <div className="case-category">{caseItem.category}</div>
+                  <h3 className="case-title">{caseItem.title}</h3>
+                  <p className="case-description">{caseItem.description}</p>
+                  
+                  <div className="case-metrics">
+                    {caseItem.metrics.map((metric, metricIndex) => (
+                      <div key={metricIndex} className="case-metric">
+                        <div className="case-metric-value">{metric.value}</div>
+                        <div className="case-metric-label">{metric.label}</div>
                       </div>
+                    ))}
+                  </div>
+                  
+                  {caseItem.dashboardImage && (
+                    <div className="mt-6">
+                      <img 
+                        src={caseItem.dashboardImage} 
+                        alt="Dashboard de resultados" 
+                        className="w-full h-auto object-cover rounded-lg border border-border-light shadow-sm"
+                      />
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            {/* Navigation buttons */}
-            <div className="flex justify-center space-x-4 mt-8">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={prevSlide}
-                className="rounded-full w-12 h-12 p-0"
-              >
-                <ArrowLeft className="h-4 w-4" />
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={nextSlide}
-                className="rounded-full w-12 h-12 p-0"
-              >
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </div>
-
-            {/* Dots indicator */}
-            <div className="flex justify-center space-x-2 mt-4">
-              {casesData.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
-                  }`}
-                />
-              ))}
-            </div>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 relative overflow-hidden">
-        {/* Background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-white/5 rounded-full blur-2xl"></div>
-        </div>
-
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            Pronto para <span className="text-yellow-300">transformar</span> seu negócio?
+      <section id="contact" className="py-20 bg-primary-blue text-white text-center section-reveal">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl lg:text-6xl font-bold mb-6 heading-enhanced">
+            Pronto para impulsionar seu negócio?
           </h2>
-          <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
-            Entre em contato conosco e descubra como podemos impulsionar o crescimento da sua empresa com estratégias de marketing digital eficazes.
+          <p className="text-xl lg:text-2xl mb-12 max-w-3xl mx-auto text-background-white">
+            Entre em contato conosco e descubra como a Digitalfy pode transformar sua presença digital e gerar resultados reais.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-4 font-semibold">
-              Solicitar Proposta Gratuita
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-4">
-              Agendar Consultoria
-            </Button>
-          </div>
+          <Button size="lg" className="btn-enhanced bg-background-white text-primary-blue hover:bg-background-lighter text-lg px-8 py-4">
+            Fale Conosco Agora
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="bg-gray-900 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Logo e descrição */}
-            <div className="md:col-span-2">
-              <img src={digitalfyLogoHorizontal} alt="Digitalfy" className="h-8 mb-4 brightness-0 invert" />
-              <p className="text-gray-400 mb-6 max-w-md">
-                Transformamos negócios através de estratégias de marketing digital inovadoras e resultados mensuráveis.
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <Instagram className="h-6 w-6" />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <Linkedin className="h-6 w-6" />
-                </a>
-              </div>
-            </div>
-
-            {/* Serviços */}
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Serviços</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Presença Online</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Geração de Leads</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Marketing Político</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Proteção de Marcas</a></li>
-              </ul>
-            </div>
-
-            {/* Contato */}
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Contato</h3>
-              <div className="space-y-3 text-gray-400">
-                <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5" />
-                  <a href="https://wa.me/5511999999999" className="hover:text-white transition-colors">
-                    (11) 99999-9999
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="h-5 w-5" />
-                  <span>São Paulo, SP</span>
-                </div>
-              </div>
+      <footer className="bg-text-dark text-text-light py-12">
+        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <img src={digitalfyLogoHorizontal} alt="Digitalfy" className="h-8 mb-4" />
+            <p className="text-sm mb-4">
+              Transformando sua presença digital em resultados mensuráveis.
+            </p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-text-light hover:text-background-white transition-colors">
+                <Instagram className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-text-light hover:text-background-white transition-colors">
+                <Linkedin className="h-6 w-6" />
+              </a>
             </div>
           </div>
 
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Digitalfy. Todos os direitos reservados.</p>
+          <div>
+            <h3 className="text-lg font-bold text-background-white mb-4">Navegação</h3>
+            <ul className="space-y-2">
+              <li><a href="#home" className="hover:text-background-white transition-colors">Home</a></li>
+              <li><a href="#services" className="hover:text-background-white transition-colors">Serviços</a></li>
+              <li><a href="#about" className="hover:text-background-white transition-colors">Sobre</a></li>
+              <li><a href="#cases" className="hover:text-background-white transition-colors">Cases</a></li>
+              <li><a href="#contact" className="hover:text-background-white transition-colors">Contato</a></li>
+            </ul>
           </div>
+
+          <div>
+            <h3 className="text-lg font-bold text-background-white mb-4">Contato</h3>
+            <p className="text-sm mb-2 flex items-center">
+              <Phone className="h-5 w-5 mr-2" />
+              +55 11 99999-9999
+            </p>
+            <p className="text-sm mb-2 flex items-center">
+              <MapPin className="h-5 w-5 mr-2" />
+              São Paulo, SP - Brasil
+            </p>
+            <p className="text-sm flex items-center">
+              <Globe className="h-5 w-5 mr-2" />
+              www.digitalfy.com.br
+            </p>
+          </div>
+        </div>
+        <div className="text-center text-sm text-text-light mt-8">
+          &copy; {new Date().getFullYear()} Digitalfy. Todos os direitos reservados.
         </div>
       </footer>
     </div>
@@ -529,4 +449,5 @@ function App() {
 }
 
 export default App;
+
 
